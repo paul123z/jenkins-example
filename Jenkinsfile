@@ -1,5 +1,27 @@
 pipeline {
     agent any
+    stages {
+        stage('Build') {
+            steps {
+                sh 'mvn clean install'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                withCredentials([usernamePassword(credentialsId: 'nexusdemo', usernameVariable: 'NEXUS_USER', passwordVariable: 'NEXUS_PASSWORD')]) {
+                    sh 'mvn deploy -Dmaven.test.skip=true -DaltDeploymentRepository=pavol-mvn-deploy::default::http://ec2-3-68-90-3.eu-central-1.compute.amazonaws.com:8081/repository/pavol-mvn-deploy/ -Dusername=$NEXUS_USER -Dpassword=$NEXUS_PASSWORD'
+                }
+            }
+        }
+    }
+}
+
+
+
+
+/*
+pipeline {
+    agent any
 
     stages {
         stage ('Clean Stage') {
