@@ -44,7 +44,10 @@ pipeline {
 
             steps {
                 withMaven(maven : 'maven_3_5_0') {
-                    sh 'mvn deploy'
+                    withCredentials([usernamePassword(credentialsId: 'nexusdemo', passwordVariable: 'nexuspw', usernameVariable: 'nexus')]) {
+    sh 'mvn deploy'
+}
+                    
                 }
             }
         }
