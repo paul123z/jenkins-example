@@ -64,7 +64,7 @@
 
     <distributionManagement>
         <repository>
-            <id>pavol-mvn-deploy</id>
+            <id>nexus</id>
             <name>pavol-mvn-deploy</name>
             <url>http://ec2-3-68-90-3.eu-central-1.compute.amazonaws.com:8081/repository/pavol-mvn-deploy/</url>
         </repository>
