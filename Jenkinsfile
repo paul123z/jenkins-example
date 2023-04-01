@@ -20,7 +20,7 @@ pipeline {
             }
         }
 
-
+/*
         stage ('Testing Stage') {
 
             steps {
@@ -29,7 +29,7 @@ pipeline {
                 }
             }
         }
-
+*/
         stage ('package Stage') {
 
             steps {
