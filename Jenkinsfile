@@ -40,7 +40,7 @@ pipeline {
         }
 
 
-        stage ('package Stage') {
+        stage ('deploy Stage') {
 
             steps {
                 withMaven(maven : 'maven_3_5_0') {
