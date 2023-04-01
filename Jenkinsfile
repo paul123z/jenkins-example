@@ -1,3 +1,4 @@
+/* // chat gpt sugest
 pipeline {
     agent any
     stages {
@@ -14,12 +15,12 @@ pipeline {
             }
         }
     }
-}
+*/
 
 
 
 
-/*
+
 pipeline {
     agent any
 
