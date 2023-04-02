@@ -51,7 +51,7 @@ pipeline {
                             type: 'jar']], 
                     credentialsId: 'nexusdemo', 
                     groupId: 'com.techprimers.testing', 
-                    nexusUrl: 'ec2-3-68-90-3.eu-central-1.compute.amazonaws.com:8081', 
+                    nexusUrl: 'ec2-18-192-245-57.eu-central-1.compute.amazonaws.com:8081', 
                     nexusVersion: 'nexus3', 
                     protocol: 'http', 
                     repository: 'simpleapp-nexusdemo-pavol', 
